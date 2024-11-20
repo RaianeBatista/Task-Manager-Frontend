@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import TaskItem from './components/TaskItem';
 
+//App é component pai de TasItem
 const App = () => {
   const mounted = useRef(false);
 
@@ -41,6 +42,8 @@ const App = () => {
 
 export default App;
 
+
+// Componentes de Classe
 // import React from 'react';
 // import TaskItem from './components/TaskItem';
 

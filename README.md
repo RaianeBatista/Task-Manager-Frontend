@@ -7,6 +7,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm start`
+### `npm run start`
+### `yarn start`
+### `yarn add`
+### `yarn remove`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -68,3 +72,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Ciclo de vida de um componente
+Todo componente tem um ciclo de vida, que se caracteriza em três fases principais:
+* Mounting: perído em que ele está sendo inserido no DOM
+
+* Updating: período em que ele está sendo atualizado (state ou props mudaram)
+
+* Unmounting: período em que ele está sendo removido do DOM (if else, saída da página)
+

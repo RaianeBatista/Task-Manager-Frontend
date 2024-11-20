@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
 
 const TaskItem = ({ task }) => {
-  const [testState] = useState();
-
   useEffect(() => {
       console.log('component was mounted!');
       
       return () => {
-          console.log('i will unmount!')
+         console.log('i will unmount!')
       }
   }, []);
 
@@ -21,6 +19,7 @@ const TaskItem = ({ task }) => {
 
 export default TaskItem;
 
+// Componentes de Classe
 // import React from 'react';
 // class TaskItem extends React.Component {
 //   componentDidMount() {
