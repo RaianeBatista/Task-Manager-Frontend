@@ -1,0 +1,17 @@
+$background-color: linear-gradient(259deg, #07535a  -41.68%, #572377 146.85%);   
+$primary-text-color: #decece;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Archivo', sans-serif;
+  background: $background-color;
+  color: $primary-text-color;
+}
+
+
