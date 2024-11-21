@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import {useAlert} from 'react-alert'
+import { useAlert } from 'react-alert';
 
 import './Tasks.scss';
 
@@ -37,7 +37,11 @@ const Tasks = () => {
           {tasks
             .filter((task) => task.isCompleted === false)
             .map((lastTask) => (
-              <TaskItem task={lastTask} fetchTasks={fetchTasks} />
+              <TaskItem
+                key={lastTask._id}
+                task={lastTask}
+                fetchTasks={fetchTasks}
+              />
             ))}
         </div>
       </div>
@@ -48,7 +52,11 @@ const Tasks = () => {
           {tasks
             .filter((task) => task.isCompleted)
             .map((completedTask) => (
-              <TaskItem task={completedTask} fetchTasks={fetchTasks} />
+              <TaskItem
+                key={completedTask._id}
+                task={completedTask}
+                fetchTasks={fetchTasks}
+              />
             ))}
         </div>
       </div>
