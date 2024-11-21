@@ -1,13 +1,35 @@
 import CustomInput from './CustomInput';
+import CustomButton from './CustomButton';
+import { FaPlus } from 'react-icons/fa';
+
+import { useState } from 'react';
+import axios from 'axios';
+import { useAlert } from 'react-alert';
 
 import './AddTask.scss';
-import { useState } from 'react';
 
 const AddTask = () => {
   const [task, setTask] = useState('');
 
+  const alert = useAlert();
+
   const onChange = (e) => {
     setTask(e.target.value);
+  };
+
+  const handleTaskAddtion = async () => {
+    try {
+      if (task.length === 0) {
+        return alert.error(
+          'A tarefa precisa de uma descrição para ser adicionada.'
+        );
+      }
+
+      await axios.post('http://localhost:8000/tasks', {
+        description: task,
+        isCompleted: false,
+      });
+    } catch (error) {}
   };
 
   return (
@@ -17,6 +39,9 @@ const AddTask = () => {
         value={task}
         onChange={onChange}
       />
+      <CustomButton onClick={handleTaskAddtion}>
+        <FaPlus size={14} color='#fff' />
+      </CustomButton>
     </div>
   );
 };
